@@ -1,0 +1,21 @@
+<div style = "text-align:center">
+  <h1 style="color:green">Product List</h1>
+
+</div>
+
+<input [(ngModel)]="text" placeholder="Search products..." />
+<select [(ngModel)]="selectedCategory">
+  <option value="All">All Categories</option>
+  <option value="Electronics">Electronics</option>
+  <option value="Fashion">Fashion</option>
+</select>
+
+<div class="products">
+  <div class="product" *ngFor="let product of filteredProducts">
+    <img [src]="product.image" alt="{{ product.name }}" />
+    <h3>{{ product.name }}</h3>
+    <p>₹{{ product.price }}</p>
+    <button (click)="viewProduct(product.id)">Details</button>
+    <button (click)="addToCart(product)">Add to Cart</button>
+  </div>
+</div>

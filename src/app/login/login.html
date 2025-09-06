@@ -1,0 +1,13 @@
+<h2>Login</h2>
+
+<form (ngSubmit)="onlogin()">
+    <input type="text" [(ngModel)]="email" name="email" placeholder="Enter email" required>
+    <br><br>
+    <input type="password" [(ngModel)]="password" name="password" placeholder="Enter password" required>
+    <br><br>
+    <button type="submit">Login</button>
+</form>
+
+<p>
+    <a routerLink="/signup">New user? Signup</a>
+</p>

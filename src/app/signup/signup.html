@@ -1,0 +1,15 @@
+<h1> Signup Page</h1>
+
+<form (ngSubmit)="onSign()">
+    <input type="text" [(ngModel)]="SignupData.name" name="name" placeholder="Enter name">
+    <br><br>
+    <input type="text" [(ngModel)]="SignupData.email" name="email" placeholder="Enter email">
+    <br><br>
+    <input type="text" [(ngModel)]="SignupData.password" name="password" placeholder="Enter password">
+    <br><br>
+
+    <button>Signup</button>
+
+    <a routerLink="/login">Already account</a>
+
+</form>
