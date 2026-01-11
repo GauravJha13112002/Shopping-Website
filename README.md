@@ -7,8 +7,10 @@ It focuses on clean UI, modular Angular architecture, and practical implementati
 Features
 
 1) User Authentication with Login & Signup
-2) Category-wise Product Listing (Electronics, Bags, etc.
+2) Category-wise Product Listing Electronics, Bags, etc.
+   
 3)Add to Cart & Remove from Cart functionality
+
 4)Global Cart Service for managing cart state across components
 
 Technologies Used
