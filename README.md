@@ -7,16 +7,13 @@ It focuses on clean UI, modular Angular architecture, and practical implementati
 Features
 
 1) User Authentication with Login & Signup
-2) Category-wise Product Listing (Electronics, Bags, etc.)
+2) Category-wise Product Listing (Electronics, Bags, etc.
 3)Add to Cart & Remove from Cart functionality
 4)Global Cart Service for managing cart state across components
 
 Technologies Used
 
-Angular
-TypeScript
-HTML
-CSS
+Angular,TypeScript,HTML,CSS
 
 How It Works 
 1) Users can register or log in using the authentication module.
