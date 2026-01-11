@@ -1,3 +1,31 @@
+Description
+This is a frontend-only Angular-based E-Commerce web application developed to simulate a real-world online shopping experience.
+The application includes user authentication (login/signup), category-wise product listing (Electronics, Bags, etc.), and cart management.
+It focuses on clean UI, modular Angular architecture, and practical implementation of core Angular concepts.
+
+Features
+
+1) User Authentication with Login & Signup
+2) Category-wise Product Listing (Electronics, Bags, etc.)
+3)Add to Cart & Remove from Cart functionality
+4)Global Cart Service for managing cart state across components
+
+Technologies Used
+Angular
+TypeScript
+HTML
+CSS
+
+How It Works 
+1) Users can register or log in using the authentication module.
+2) After login, users can browse products categorized into sections like Electronics and Bags.
+3) Each product can be added to the cart using a shared Cart Service.
+4) The cart dynamically updates items and reflects changes across the application.
+5) Angular Routing is used for smooth navigation between pages.
+6) Reusable components and services ensure clean and maintainable code structure.
+
+
+
 # EcommerceLaptopProject
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.4.
