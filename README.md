@@ -1,4 +1,5 @@
 Description
+
 This is a frontend-only Angular-based E-Commerce web application developed to simulate a real-world online shopping experience.
 The application includes user authentication (login/signup), category-wise product listing (Electronics, Bags, etc.), and cart management.
 It focuses on clean UI, modular Angular architecture, and practical implementation of core Angular concepts.
