@@ -12,6 +12,7 @@ Features
 4)Global Cart Service for managing cart state across components
 
 Technologies Used
+
 Angular
 TypeScript
 HTML
