@@ -1,3 +1,5 @@
+ Project Output : https://gauravjha13112002.github.io/NextCart-Online-Shopping-Platform/
+
 Description
 
 This is a frontend-only Angular-based E-Commerce web application developed to simulate a real-world online shopping experience.
