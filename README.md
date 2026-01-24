@@ -1,4 +1,6 @@
- Project Output : https://gauravjha13112002.github.io/NextCart-Online-Shopping-Platform/
+NEXTCart-Online Shopping Platform
+
+Project Output : https://gauravjha13112002.github.io/NextCart-Online-Shopping-Platform/
 
 Description
 
