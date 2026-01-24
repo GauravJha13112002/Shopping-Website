@@ -1,28 +1,349 @@
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
 
-th, td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: center;
-}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
 
-button {
-  padding: 6px 12px;
-  background-color: #ff5252;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+    /* Cart Container */
+    .cart-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    }
 
-button:hover {
-  background-color: #ff1744;
-}
+    /* Heading */
+    h2 {
+      color: #2d3748;
+      font-size: 32px;
+      margin-bottom: 30px;
+      text-align: center;
+      font-weight: 700;
+      position: relative;
+      padding-bottom: 15px;
+    }
 
-h3 {
-  margin-top: 20px;
-}
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 2px;
+    }
+
+    /* Table Styles */
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin-bottom: 30px;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    th {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 18px 15px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    th:first-child {
+      border-top-left-radius: 12px;
+    }
+
+    th:last-child {
+      border-top-right-radius: 12px;
+      text-align: center;
+    }
+
+    td {
+      padding: 20px 15px;
+      border-bottom: 1px solid #e2e8f0;
+      color: #4a5568;
+      font-size: 15px;
+      background: white;
+      transition: background-color 0.3s ease;
+    }
+
+    tr:hover td {
+      background-color: #f7fafc;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    td:last-child {
+      text-align: center;
+    }
+
+    /* Quantity Input */
+    input[type="number"] {
+      width: 70px;
+      padding: 8px 10px;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      font-size: 15px;
+      text-align: center;
+      transition: all 0.3s ease;
+      font-weight: 600;
+      color: #2d3748;
+    }
+
+    input[type="number"]:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      opacity: 1;
+      height: 30px;
+    }
+
+    /* Remove Button */
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    tr button {
+      background-color: #fc8181;
+      color: white;
+      padding: 8px 16px;
+    }
+
+    tr button:hover {
+      background-color: #f56565;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(245, 101, 101, 0.4);
+    }
+
+    tr button:active {
+      transform: translateY(0);
+    }
+
+    /* Total Section */
+    h3 {
+      text-align: right;
+      color: #2d3748;
+      font-size: 26px;
+      margin-bottom: 20px;
+      font-weight: 700;
+      padding: 20px;
+      background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+      border-radius: 12px;
+      border-left: 5px solid #667eea;
+    }
+
+    /* Clear Cart Button */
+    .cart-container > button {
+      display: block;
+      width: 100%;
+      max-width: 250px;
+      margin: 0 auto;
+      padding: 15px 30px;
+      background: linear-gradient(135deg, #fc8181 0%, #f56565 100%);
+      color: white;
+      font-size: 16px;
+    }
+
+    .cart-container > button:hover {
+      background: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(245, 101, 101, 0.4);
+    }
+
+    /* Empty Cart Styles */
+    .empty-cart {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .empty-cart p {
+      font-size: 20px;
+      color: #718096;
+      margin-bottom: 25px;
+      font-weight: 500;
+    }
+
+    .empty-cart a {
+      display: inline-block;
+      padding: 14px 32px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .empty-cart a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .cart-container {
+        padding: 25px 15px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      table {
+        font-size: 13px;
+      }
+
+      th, td {
+        padding: 12px 8px;
+      }
+
+      th {
+        font-size: 12px;
+      }
+
+      input[type="number"] {
+        width: 55px;
+        padding: 6px;
+      }
+
+      h3 {
+        font-size: 20px;
+        padding: 15px;
+      }
+
+      button {
+        font-size: 12px;
+        padding: 8px 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+
+      .cart-container {
+        padding: 20px 10px;
+      }
+
+      /* Make table scrollable on mobile */
+      .table-wrapper {
+        overflow-x: auto;
+      }
+
+      table {
+        min-width: 500px;
+      }
+    }
+
+    /* Animation for items */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    tr {
+      animation: fadeIn 0.5s ease;
+    }
+
+
+  <div class ="cart-container">
+    <h2>Your Cart</h2>
+
+    <!-- Cart with items -->
+    <div class="cart-items">
+      <div class="table-wrapper">
+        <table>
+          <tr>
+            <th>Product</th>
+            <th>Price (₹)</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Remove</th>
+          </tr>
+          <tr>
+            <td>Wireless Headphones</td>
+            <td>2,499</td>
+            <td>
+              <input type="number" value="1" min="1">
+            </td>
+            <td>2,499</td>
+            <td>
+              <button>Remove</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Smart Watch</td>
+            <td>4,999</td>
+            <td>
+              <input type="number" value="2" min="1">
+            </td>
+            <td>9,998</td>
+            <td>
+              <button>Remove</button>
+            </td>
+          </tr>
+          <tr>
+            <td>Bluetooth Speaker</td>
+            <td>1,799</td>
+            <td>
+              <input type="number" value="1" min="1">
+            </td>
+            <td>1,799</td>
+            <td>
+              <button>Remove</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <h3>Total: ₹14,296</h3>
+      <button>Clear Cart</button>
+    </div>
+    
+
+    <!-- Uncomment below to see empty cart state -->
+    <!-- 
+    <div class="empty-cart">
+      <p>Your cart is empty.</p>
+      <a href="/">Go to Products</a>
+    </div>
+    -->
+  </div>
+</body>
+</html>

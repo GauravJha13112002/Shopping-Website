@@ -24,6 +24,9 @@ export class Login {
     }
     else {
       alert("Invalid Credentials");
+      
     }
+
+
   }
 }
